@@ -9,12 +9,10 @@ const User = require('../models');
 
 
 // render the login form
-router.get('/login', async (req, res) => {
-    res.render('login');
-});
+router.get('/login', async (req, res) => res.render('login'));
 
 
-// passport authentication
+// login logic with passport authentication
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
         successRedirect: '/auth/dashboard',

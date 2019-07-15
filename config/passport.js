@@ -31,6 +31,9 @@ module.exports = passport => {
       })
   );
 
+
+
+    // session logic
     passport.serializeUser((user, done) => done(null, user.id));
 
     passport.deserializeUser((id, done) => {
